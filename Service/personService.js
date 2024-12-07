@@ -21,3 +21,11 @@ const createManyPeople = (arrayOfPeople, done) => {
       done(null, people);
     });
   };
+
+  
+const findPeopleByName = (personName, done) => {
+    Person.find({ name: personName }, (err, people) => {
+      if (err) return console.error(err);
+      done(null, people);
+    });
+  };
