@@ -14,3 +14,10 @@ const createAndSavePerson = (done) => {
     });
   };
   
+  
+const createManyPeople = (arrayOfPeople, done) => {
+    Person.create(arrayOfPeople, (err, people) => {
+      if (err) return console.error(err);
+      done(null, people);
+    });
+  };
