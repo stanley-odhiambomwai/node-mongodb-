@@ -88,3 +88,16 @@ const removeById = (personId, done) => {
       done(null, result);
     });
   };
+
+  
+const queryChain = (done) => {
+    const foodToSearch = 'burritos';
+    Person.find({ favoriteFoods: foodToSearch })
+      .sort('name')
+      .limit(2)
+      .select('-age')
+      .exec((err, people) => {
+        if (err) return console.error(err);
+        done(null, people);
+      });
+  };
