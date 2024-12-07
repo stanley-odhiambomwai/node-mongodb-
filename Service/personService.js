@@ -101,3 +101,16 @@ const queryChain = (done) => {
         done(null, people);
       });
   };
+
+  module.exports = {
+    createAndSavePerson,
+    createManyPeople,
+    findPeopleByName,
+    findOneByFood,
+    findPersonById,
+    findEditThenSave,
+    findAndUpdate,
+    removeById,
+    removeManyPeople,
+    queryChain,
+  };
