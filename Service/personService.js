@@ -29,3 +29,12 @@ const findPeopleByName = (personName, done) => {
       done(null, people);
     });
   };
+
+  
+const findOneByFood = (food, done) => {
+    Person.findOne({ favoriteFoods: food }, (err, person) => {
+      if (err) return console.error(err);
+      done(null, person);
+    });
+  };
+  
