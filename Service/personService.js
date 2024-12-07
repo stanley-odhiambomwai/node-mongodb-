@@ -3,9 +3,9 @@ const Person = require('../models/personModel');
 
 const createAndSavePerson = (done) => {
     const person = new Person({
-      name: 'John Doe',
-      age: 30,
-      favoriteFoods: ['Pizza', 'Pasta'],
+      name: 'Stanley Odhiambo',
+      age: 24,
+      favoriteFoods: ['Chapati', 'Rice'],
     });
   
     person.save((err, data) => {
